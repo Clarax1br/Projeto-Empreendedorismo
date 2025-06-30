@@ -6,16 +6,21 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cosméticos 1002</title>
   <link rel="stylesheet" href="Style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
   <style>
-  section {
-    border-bottom: 2px solid #d7b564;
-  }
+    .section-divider {
+      width: 100vw;
+      height: 2px;
+      background-color: #d7b564;
+      margin: 0;
+      border: none;
+    }
 
-  .products .card {
-    border: 2px solid #d7b564 !important;
-  }
-</style>
+    .products .card {
+      border: 2px solid #d7b564 !important;
+    }
+  </style>
 </head>
 
 <body>
@@ -30,16 +35,18 @@
 
   <!-- home section starts -->
   <section class="home" id="home" style="background: none;">
-    <div class="content" style="display: flex; align-items: center; justify-content: center; gap: 50px;">
+    <div class="content" style="display: flex; align-items: center; justify-content: center; gap: 50px; flex-direction: column;">
       <div>
         <h3>Bem-vindo à Cosméticos 1002</h3>
         <span>Beleza natural, brilho verdadeiro</span>
         <p>texto</p>
       </div>
+      <img src="logo.png" alt="Logo grande" style="max-width: 250px;">
     </div>
-    <img src="logo.png" alt="Logo grande" style="max-width: 250px;">
   </section>
   <!-- home section end -->
+
+  <hr class="section-divider">
 
   <!-- product section start -->
   <section class="products" id="product">
@@ -81,11 +88,13 @@
   </section>
   <!-- product section end -->
 
+  <hr class="section-divider">
+
   <!-- about section start -->
   <section class="about" id="about">
     <h1 class="heading"><span>sobre </span>nós</h1>
     <div class="row">
-      <div class="image_container">
+      <div class="image_container" style="text-align: center; width: 100%;">
         <img src="logo.png" alt="Logo grande2" style="max-width: 200px;">
       </div>
       <div class="content">
@@ -95,6 +104,8 @@
     </div>
   </section>
   <!-- about section end -->
+
+  <hr class="section-divider">
 
   <!-- footer section start -->
   <section class="footer">
