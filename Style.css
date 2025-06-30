@@ -142,7 +142,7 @@ section {
 .home {
     display: flex;
     align-items: center;
-    min-height: 100vh;
+    min-height: 60vh;
     background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(home.webp);
     background-repeat: no-repeat;
     background-position: center;
@@ -171,22 +171,6 @@ section {
     color: #fff;
     padding: 1rem 0;
     line-height: 1.5;
-}
-
-.btn {
-    display: inline-block;
-    margin-top: 1rem;
-    background-color: #fff;
-    border-radius: 3rem;
-    color: #000;
-    padding: 0.9rem 3.5rem;
-    font-size: 1.7rem;
-    font-weight: 600;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background-color: #d7b564;
 }
 
 /* responsive home section */
@@ -289,57 +273,6 @@ section {
 }
 
 /* about section end */
-
-
-/* icons section start */
-.icons_container {
-    background-color: #000;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 1.5rem;
-    padding-top: 5rem;
-    padding-bottom: 5rem;
-}
-
-.icons_container .icons {
-    background-color: #000;
-    border: 0.1rem solid rgba(0, 0, 0, 0.1);
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    flex: 1 1 25rem;
-}
-
-.icons_container .icons i {
-    font-size: 5rem;
-    margin-right: 2rem;
-    color: #000;
-}
-
-.icons_container .icons h3 {
-    color: #000;
-    padding-bottom: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.icons_container .icons span {
-    color: #000;
-    font-size: 1.3rem;
-
-}
-
-@media (max-width: 768px) {
-    .icons_container .icons h3 {
-        font-size: 2rem;
-    }
-
-    .icons_container .icons span {
-        font-size: 1.7rem;
-
-    }
-}
-
-/* icons section ends */
 
 /* product section start */
 .products .card_container {
