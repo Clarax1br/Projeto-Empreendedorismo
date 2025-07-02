@@ -5,30 +5,20 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cosméticos 1002</title>
-  <link rel="stylesheet" href="Style.css">
+  <link id="theme-style" rel="stylesheet" href="dark.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <style>
-    .section-divider {
-      width: 100vw;
-      height: 2px;
-      background-color: #feaac1;
-      margin: 0;
-      border: none;
-    }
-
-    .products .card {
-      border: 2px solid #feaac1 !important;
-    }
-  </style>
 </head>
 
 <body>
   <!-- header section start -->
   <header>
     <a href="#" class="logo">
-      <img src="logo_completa.jpeg" alt="Logo" style="height: 60px;">
+      <img class="logo-img" src="logo.png" alt="Logo" style="height: 60px;">
     </a>
+    <button id="theme-toggle" aria-label="Alternar tema">
+      <i class="fas fa-moon"></i>
+    </button>
   </header>
   <!-- header section end -->
 
@@ -40,7 +30,7 @@
         <span>Beleza natural, brilho verdadeiro</span>
         <p>A Cosméticos 1002 é uma empresa criada por alunos como projeto escolar de empreendedorismo. Vendemos kits com pente, touca de cetim, presilhas, xuxinhas e também fazemos tererê na hora. Nosso objetivo é oferecer produtos acessíveis e práticos voltados ao público feminino.</p>
       </div>
-      <img src="logo_completa.jpeg" alt="Logo grande" style="max-width: 250px;">
+      <img class="logo-img" src="logo.png" alt="Logo grande" style="max-width: 250px;">
     </div>
   </section>
   <!-- home section end -->
@@ -94,7 +84,7 @@
     <h1 class="heading">Sobre <span>Nós</span></h1>
     <div class="row">
       <div class="image_container" style="text-align: center; width: 100%;">
-        <img src="logo_completa.jpeg" alt="Logo grande2" style="max-width: 200px;">
+        <img class="logo-img" src="logo.png" alt="Logo grande2" style="height: 200px;">
       </div>
       <div class="content">
         <h3>Por que escolher a Cosméticos 1002?</h3>
@@ -125,5 +115,31 @@
   <!-- footer section end -->
 
 </body>
+
+<script>
+  const toggleBtn = document.getElementById('theme-toggle');
+  const themeLink = document.getElementById('theme-style');
+  const icon = toggleBtn.querySelector('i');
+
+  // Seleciona todas as imagens de logo
+  const logoImages = document.querySelectorAll('.logo-img');
+
+  let isLight = false; // começa no tema escuro
+
+  toggleBtn.addEventListener('click', () => {
+    if (isLight) {
+      themeLink.href = 'dark.css';
+      logoImages.forEach(img => img.src = 'logo.png');
+      icon.classList.remove('fa-sun');
+      icon.classList.add('fa-moon');
+    } else {
+      themeLink.href = 'light.css';
+      logoImages.forEach(img => img.src = 'logo_completa.jpeg');
+      icon.classList.remove('fa-moon');
+      icon.classList.add('fa-sun');
+    }
+    isLight = !isLight;
+  });
+</script>
 
 </html>
